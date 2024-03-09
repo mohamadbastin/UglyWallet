@@ -11,14 +11,14 @@ def create_private_key():
     w3 = Web3()
     account = w3.eth.account.create()
     key = w3.to_hex(account.key)
-    with open("keyfile", "w") as f:
+    with open("keyfile.key", "w") as f:
         f.write(key)
     return key, account.address
 
 
 def get_private_key():
     try:
-        with open("keyfile", "r") as f:
+        with open("keyfile.key", "r") as f:
             print("keyfile found. reading key.")
             key = f.read()
             return key, Account.from_key(key).address
