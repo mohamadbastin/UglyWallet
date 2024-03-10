@@ -40,10 +40,10 @@ def main():
         print(f"balance: {w3.from_wei(balance, 'ether')} ETH")
 
     elif option == "3":
-        # print("enter address:")
-        to_address = "0xFd7716d8B0786349C6515C3aDBadD12a093E6574"
-        # print("enter amount:")
-        amount = 0.01
+        print("enter address:")
+        to_address = input("address: ")
+        print("enter amount:")
+        amount = float(input("amount: "))
         print("sending...")
         tx = {
             "chainId": 5,
